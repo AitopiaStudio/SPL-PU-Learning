@@ -1,0 +1,48 @@
+# configs/risk.yaml
+# Configuration for Home Credit Default Risk dataset
+
+dataset: risk
+prior: 0.2
+seed: 0
+
+# Data (download from https://www.kaggle.com/c/home-credit-default-risk)
+n_labeled: 400
+n_unlabeled: 200000
+n_valid: 2000
+n_test: 2000
+data_dir: data/
+
+# Pre-training
+pre_loss: bce
+pre_epochs: 400
+pre_lr: 0.001
+pre_batch_size: 64
+pre_optim: adam
+pre_wd: 0.0
+pre_n_warmup: 0
+
+# SPL Training
+loss: bce
+spl_type: linear
+scheduler_type: exp
+alpha: 0.2
+eta: 1.1
+max_thresh: 2.0
+grow_steps: 10
+epochs: 100
+inner_epochs: 1
+batch_size: 64
+batch_size_val: 128
+lr: 0.0001
+wd: 0.0
+optim: adam
+patience: 5
+w_entropy: 0.0
+phi: 0.0
+temper: 1.0
+
+# Bilevel (optional — uncomment to use)
+# bilevel: true
+# outer_iters: 5
+# outer_lr: 0.01
+# hyper_K: 10

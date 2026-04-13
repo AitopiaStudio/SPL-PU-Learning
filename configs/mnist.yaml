@@ -1,0 +1,53 @@
+# configs/mnist.yaml
+# Quick-start configuration for MNIST dataset
+
+dataset: mnist
+prior: 0.2
+seed: 0
+
+# Data
+n_labeled: 2000
+n_unlabeled: 4000
+n_valid: 500
+n_test: 5000
+data_dir: data/
+
+# Pre-training
+pre_loss: nnpu
+pre_epochs: 400
+pre_lr: 0.001
+pre_batch_size: 64
+pre_optim: adam
+pre_wd: 0.0
+pre_n_warmup: 0
+pre_cos: false
+
+# SPL Training
+loss: bce
+spl_type: linear       # Options: hard, linear, log, logistic, poly, welsch, cauchy, huber, l1l2
+scheduler_type: exp    # Options: const, exp, linear, rootp, geom
+alpha: 0.1             # Initial threshold
+eta: 1.1               # Growth rate (for exp scheduler)
+max_thresh: 2.0
+grow_steps: 10
+epochs: 100
+inner_epochs: 1
+batch_size: 64
+batch_size_val: 128
+lr: 0.0001
+wd: 0.0
+optim: adam
+n_warmup: 0
+patience: 5
+w_entropy: 0.0
+phi: 0.0
+temper: 1.0
+restart: false
+cos: false
+
+# Bilevel (disabled by default)
+bilevel: false
+outer_iters: 5
+outer_lr: 0.01
+hyper_K: 10
+warm_start: false

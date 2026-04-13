@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# Data (large files — excluded)
+data/risk/
+data/cifar-10*/
+data/MNIST/
+
+# Include sample dataset
+!data/sample/
+!data/sample/*.csv
+!data/sample/*.txt
+
+# Exclude other large CSVs at root data dir
+data/*.csv
+data/*.txt
+
+# Model checkpoints (except pretrained examples)
+models/
+*.pth
+!pretrained_models/*.pth
+
+# MLflow
+mlruns/
+
+# Logs
+*.log
+logs/
+data_anal/
+results/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
