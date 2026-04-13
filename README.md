@@ -5,9 +5,6 @@
 [![UCL Dissertation](https://img.shields.io/badge/UCL-MSc%20Dissertation%202022-purple.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> UCL 数据科学与机器学习 硕士论文项目 · 2022年
-> 作者：付子桢 · 导师：Alastair Moore
-
 ---
 
 ## 背景与问题
